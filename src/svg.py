@@ -56,7 +56,7 @@ def svg(data: dict):
     dwg.add(dwg.text(profile['displayName'], insert = (150,50), fill='white'))
     dwg.add(dwg.text(profile['userName'], insert = (150, 80), fill = 'white'))
     
-    for i in "competitions Kernels Datasets Discussions".split():
+    for i in "Competitions Kernels Datasets Discussions".split():
         if "total"+i not in profile:
             profile["total"+i] = 0
 
