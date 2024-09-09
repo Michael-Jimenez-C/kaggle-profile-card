@@ -1,0 +1,5 @@
+.venv/
+venv/
+*.pyc
+
+consulta minima kaggle
