@@ -19,5 +19,5 @@ def getUser(url:str):
             )
     print(response.status_code)
     if response.status_code == 200:
-        return response.json()
-    return False
+        return response.status_code, response.json()
+    return response.status_code
