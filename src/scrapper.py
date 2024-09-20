@@ -1,7 +1,10 @@
 import requests
 
 def getUser(url:str):
-    headers = {               
+    """
+    Function used to get the data from the user page.
+    """
+    headers = {
         'accept': 'application/json',
         'content-type': 'application/json',
         'cookie': 'CSRF-TOKEN=CfDJ8GXdT74sZy9Iv4qC0qaf2RcOnUOGoYrmfU8iK5Mnd2y7Q4H3tiuMB_62nZSnnykcGgBCdEC8z81bnfJ16mQx-BUfJXyZWQGPCi5O4aL9Og; GCLB=CPvy5tPX76rEzwEQAw.',
