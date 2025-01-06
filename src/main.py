@@ -14,6 +14,7 @@ async def userCard(username: str):
     data = getUser(username)
     if 404 == data:
         return "User Not Found"
+    print(data)
     user_data = data[1]
     if user_data:
         dwg = svg(user_data)

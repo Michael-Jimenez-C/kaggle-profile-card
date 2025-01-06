@@ -1,5 +1,7 @@
 .venv/
 venv/
 *.pyc
-
+__pycache__/
 consulta minima kaggle
+
+pyproject.toml
