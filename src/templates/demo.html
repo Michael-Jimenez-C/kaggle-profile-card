@@ -60,14 +60,14 @@
             <h2>🎯 Vista previa de la tarjeta:</h2>
             
             <!-- Cambia "username" por un nombre de usuario real de Kaggle -->
-            <img src="http://localhost:8000/{{ username }}" 
+            <img src="{{HOST}}/{{ username }}" 
                  alt="Kaggle Profile Card" 
                  class="test-img"
                  onerror="this.style.display='none'; document.getElementById('error-msg').style.display='block';">
             
             <div id="error-msg" style="display:none; color: red; padding: 20px;">
                 ❌ Error: No se pudo cargar la imagen. Verifica que:
-                <br>• El servidor esté ejecutándose en http://localhost:8000
+                <br>• El servidor esté ejecutándose en {{HOST}}
                 <br>• El nombre de usuario sea válido
                 <br>• No hay errores de CORS
             </div>
@@ -76,7 +76,7 @@
         <div class="info">
             <h3>🔗 URL del endpoint:</h3>
             <div class="endpoint-url">
-                http://localhost:8000/{username}
+                {{HOST}}/{username}
             </div>
             
             <h3>✅ Características validadas:</h3>
@@ -90,7 +90,7 @@
 
             <h3>🛠️ Uso en HTML:</h3>
             <pre style="background: #f8f9fa; padding: 10px; border-radius: 3px; overflow-x: auto;">
-&lt;img src="http://localhost:8000/tu-usuario-kaggle" 
+&lt;img src="{{HOST}}/tu-usuario-kaggle" 
      alt="Kaggle Profile Card" 
      style="max-width: 600px; height: auto;"&gt;</pre>
         </div>

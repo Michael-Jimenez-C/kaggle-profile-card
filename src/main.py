@@ -3,6 +3,7 @@ from fastapi import FastAPI, Response, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
+import os
 
 from scrapper import getUser
 from svg import svg
@@ -29,4 +30,6 @@ async def userCard(username: str):
 
 @app.get('/', response_class=HTMLResponse)
 async def demo(request: Request, username: Optional[str] = "username"):
-    return templates.TemplateResponse(request=request, name="demo.html", context={"username": username})
+    # Obtener el host dinámicamente desde la request
+    host = f"{request.url.scheme}://{request.url.netloc}"
+    return templates.TemplateResponse(request=request, name="demo.html", context={"username": username, "HOST": host})
