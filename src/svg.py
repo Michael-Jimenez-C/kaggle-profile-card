@@ -356,8 +356,15 @@ def svg(data: dict):
     profile = data['userProfile']
     tier = get_main_achievement_tier(profile)
     
-    # Crear el drawing con el nuevo tamaño
-    dwg = svgwrite.Drawing(size=(CARD_WIDTH, CARD_HEIGHT))
+    # Crear el drawing con el nuevo tamaño y configuración para uso en <img>
+    dwg = svgwrite.Drawing(
+        size=(f"{CARD_WIDTH}px", f"{CARD_HEIGHT}px"),
+        viewBox=f"0 0 {CARD_WIDTH} {CARD_HEIGHT}",
+        xmlns="http://www.w3.org/2000/svg"
+    )
+    
+    # Agregar declaración de encoding para compatibilidad
+    dwg.attribs['xml:lang'] = 'en'
     
     # Fondo principal con gradiente sutil
     dwg.add(dwg.rect(
