@@ -1,15 +1,17 @@
 To use this api on your readme use
 
+see [demo](https://kaggle-profile-card.vercel.app)
+
 ```
-https://mai--kaggle-card--wdnwqn8bw5k9.code.run/{USERNAME}
+https://kaggle-profile-card.vercel.app/{USERNAME}
 ```
 ## Example
 With my profile
 
 ```
-https://mai--kaggle-card--wdnwqn8bw5k9.code.run/msjimenezc
+https://kaggle-profile-card.vercel.app/msjimenezc
 ```
 
 <center>
-  <img src='https://mai--kaggle-card--wdnwqn8bw5k9.code.run/msjimenezc' width=600 height=250 />
+  <img src='https://kaggle-profile-card.vercel.app/msjimenezc' width=600 height=250 />
 </center>
